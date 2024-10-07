@@ -265,29 +265,41 @@ std::unique_ptr<Metric> Config::GetMetric(const ConfigObject& theCfg)
 		}
 		else if (MetricName == "mankonovikov" || MetricName == "manko-novikov")
 		{
-		// The Manko-Novikov black hole with alpha3
+			// The Manko-Novikov black hole with alpha3
 
-		// Look up two parameters of BH
-		double MNa{ 0. };
-		double MNalpha3{ 5.0 };
-		if (!MetricSettings.lookupValue("a", MNa))
-		{
-			ScreenOutput("Manko-Novikov: no value for a given. Using default: " + std::to_string(MNa) + ".",
-				Output_Other_Default);
+			// Look up two parameters of BH
+			double MNa{ 0. };
+			double MNalpha3{ 5.0 };
+			if (!MetricSettings.lookupValue("a", MNa))
+			{
+				ScreenOutput("Manko-Novikov: no value for a given. Using default: " + std::to_string(MNa) + ".",
+					Output_Other_Default);
+			}
+			if (!MetricSettings.lookupValue("alpha3", MNalpha3))
+			{
+				ScreenOutput("Manko-Novikov: no value for alpha3 given. Using default: " + std::to_string(MNalpha3) + ".",
+					Output_Other_Default);
+			}
+
+			// Third setting to look up: using a logarithmic r coordinate or not.
+			// Don't need to output message if setting not found
+			bool rLogScale{ false };
+			MetricSettings.lookupValue("RLogScale", rLogScale);
+
+			// All settings complete; create Metric object!
+			TheMetric = std::unique_ptr<Metric>(new MankoNovikovMetric(MNa, MNalpha3, rLogScale));
 		}
-		if (!MetricSettings.lookupValue("alpha3", MNalpha3))
+		else if (MetricName == "bosonstar")
 		{
-			ScreenOutput("Manko-Novikov: no value for alpha3 given. Using default: " + std::to_string(MNalpha3) + ".",
-				Output_Other_Default);
-		}
+			// The boson star with solitonic potential
 
-		// Third setting to look up: using a logarithmic r coordinate or not.
-		// Don't need to output message if setting not found
-		bool rLogScale{ false };
-		MetricSettings.lookupValue("RLogScale", rLogScale);
+			// First setting to look up: using a logarithmic r coordinate or not.
+			// Don't need to output message if setting not found
+			bool rLogScale{ false };
+			MetricSettings.lookupValue("RLogScale", rLogScale);
 
-		// All settings complete; create Metric object!
-		TheMetric = std::unique_ptr<Metric>(new MankoNovikovMetric(MNa, MNalpha3, rLogScale));
+			// All settings complete; create Metric object!
+			TheMetric = std::unique_ptr<Metric>(new BosonStarMetric(rLogScale));
 		}
 		//// METRIC ADD POINT B ////
 		// Add an else if clause to check for your new Metric object!
