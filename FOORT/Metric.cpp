@@ -704,6 +704,7 @@ TwoIndex BosonStarMetric::getMetric_dd(const Point& p) const
 	// spherical coordinates
 	// If logscale is turned on, then the first coordinate is actually u = log(r), so r = e^u
 	real r = m_rLogScale ? exp(p[1]) : p[1];
+	r += 0.1; // to avoid division by zero
 
 	real theta = p[2];
 	real sint = sin(theta);
@@ -733,8 +734,7 @@ TwoIndex BosonStarMetric::getMetric_uu(const Point& p) const
 	// spherical coordinates
 	// If logscale is turned on, then the first coordinate is actually u = log(r), so r = e^u
 	real r = m_rLogScale ? exp(p[1]) : p[1];
-
-	r += 1e-10; // to avoid division by zero
+	r += 0.1; // to avoid division by zero
 
 	real theta = p[2];
 	real sint = sin(theta);

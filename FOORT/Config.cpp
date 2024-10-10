@@ -868,10 +868,37 @@ std::unique_ptr<ViewScreen> Config::GetViewScreen(const ConfigObject& theCfg, Di
 
 	// Get all Mesh settings
 	std::unique_ptr<Mesh> theMesh{ Config::GetMesh(theCfg,valdiag)};
+ ///////
 
 	// Create the ViewScreen!
 	std::unique_ptr<ViewScreen> theViewScreen{ new ViewScreen(pos, dir, screensize, screencenter,
 		std::move(theMesh),theMetric) };
+	if (root.exists("Metric"))
+	{
+		// Go to the Metric settings
+		ConfigSetting& MetricSettings = root["Metric"];
+
+		// Check to see that the Metric's name has been specified
+		std::string MetricName{};
+		if (MetricSettings.lookupValue("Name", MetricName))
+		{
+			std::transform(MetricName.begin(), MetricName.end(), MetricName.begin(),
+			[](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+
+			if (MetricName == "bosonstar")
+			{
+				bool rLogScale{ false };
+				MetricSettings.lookupValue("RLogScale", rLogScale);
+				if (rLogScale)
+				{
+					std::cout << "bosonstar RLogScale set to true" << std::endl;
+					theViewScreen->m_rLogScale = true;
+				}
+			}
+		}
+	}
+	// Construct the vielbein now
+	theViewScreen->ConstructVielbein();
 
 	return theViewScreen;
 }

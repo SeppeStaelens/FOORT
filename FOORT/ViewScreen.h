@@ -61,9 +61,6 @@ public:
 			ScreenOutput("ViewScreen only supports null geodesics at the moment; geodesics integrated will be null.",
 				OutputLevel::Level_0_WARNING);
 		}
-
-		// Construct the vielbein now
-		ConstructVielbein();
 	}
 
 	// Heart of the ViewScreen: here, the ViewScreen is asked to provide initial conditions
@@ -81,14 +78,17 @@ public:
 	// Description string getter (spaces allowed), also will contain information about the Mesh
 	std::string getFullDescriptionStr() const;
 
+	// Whether the metric uses a logarithmic r coordinate or not
+	bool m_rLogScale;
+
+	// Helper function to construct the vielbein given the metric
+	void ConstructVielbein();
+
 private:
 	// The metric at the position of the viewscreen (we only need indices down)
 	TwoIndex m_Metric_dd{};
 	// The vielbein used to transform from the curved spacetime at the viewscreen to a locally flat frame
 	TwoIndex m_Vielbein{};
-
-	// Helper function to construct the vielbein given the metric
-	void ConstructVielbein();
 
 	// The position and looking direction of the camera
 	const Point m_Pos;
@@ -97,9 +97,6 @@ private:
 	const ScreenPoint m_ScreenSize;
 	// The screen center
 	const ScreenPoint m_ScreenCenter;
-
-	// Whether the metric uses a logarithmic r coordinate or not
-	const bool m_rLogScale;
 
 	// const pointer to const Metric
 	const Metric* const m_theMetric;
