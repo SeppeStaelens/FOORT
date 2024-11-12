@@ -14,7 +14,6 @@ FOORT/FOORT
 PostProc/*
 FOORT/Output/BS*.dat
 .vscode/*
-FOORT/BosonStar/*
 FOORT/.vscode/*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
