@@ -6,6 +6,9 @@
 #include <cmath>	 // needed for sqrt() and sin() etc (only on Linux)
 #include <algorithm> // needed for std::find
 
+#include "spline.h" // needed for spline interpolation
+#include <sstream>	// needed for string stream
+
 /// <summary>
 /// Metric (abstract base class) functions
 /// </summary>
@@ -910,6 +913,112 @@ TwoIndex ST3CrMetric::getMetric_uu(const Point &p) const
 std::string ST3CrMetric::getFullDescriptionStr() const
 {
 	return "ST3Cr (P = " + std::to_string(m_P) + ", q0 = " + std::to_string(m_q0) + ", lambda = " + std::to_string(m_lambda) + ", " + (m_rLogScale ? "using logarithmic r coord" : "using normal r coord") + ")";
+}
+
+/// <summary>
+/// BosonStarMetric functions (implementation by Seppe Staelens)
+/// </summary>
+// Constructor, must be passed the two BS parameters and whether we are using a logarithmic radial scale
+// We always have a M = 1 BH; the parameter a gives the angular momentum a = J/M^2
+// The horizon is at r = M + k
+BosonStarMetric::BosonStarMetric(bool rLogScale) : Metric(rLogScale)
+{
+	// Make sure we are in four spacetime dimensions
+	if constexpr (dimension != 4)
+	{
+		ScreenOutput("Boson star is only defined in four dimensions!", OutputLevel::Level_0_WARNING);
+	}
+	// Boson star has a Killing vector along t and phi, so we initialize the symmetries accordingly
+	m_Symmetries = {0, 3};
+	// We have to interpolate the metric from the data files
+	std::ifstream Phi_file("BosonStar/Phi.dat");
+	std::ifstream m_file("BosonStar/m.dat");
+	if (!Phi_file.is_open() || !m_file.is_open())
+	{
+		std::cerr << "Error reading BosonStar files!" << std::endl;
+		exit(1);
+	}
+	ScreenOutput("Read BosonStar files.");
+	int line_count = 10896;
+	std::string linePhi, linem;
+	// holds the phi, m and r values from the nonuniform r-y hybrid grid. Needed for interpolation
+	// TODO: size properly, currently overestimated
+	std::vector<double> phi_vals(line_count);
+	std::vector<double> m_vals(line_count);
+	std::vector<double> r_vals(line_count);
+
+	int j = 0;
+
+	while (std::getline(Phi_file, linePhi) && j < line_count)
+	{
+		std::istringstream iss(linePhi);
+		if (iss >> r_vals[j] >> phi_vals[j])
+			j++;
+	}
+	j = 0;
+	while (std::getline(m_file, linem) && j < line_count)
+	{
+		std::istringstream iss(linem);
+		if (iss >> r_vals[j] >> m_vals[j])
+			j++;
+	}
+
+	// close the files
+	Phi_file.close();
+	m_file.close();
+	// interpolate the values
+	m_PhiSpline.set_points(r_vals, phi_vals, tk::spline::cspline_hermite);
+	m_mSpline.set_points(r_vals, m_vals, tk::spline::cspline_hermite);
+}
+TwoIndex BosonStarMetric::getMetric_dd(const Point &p) const
+{
+	// spherical coordinates
+	// If logscale is turned on, then the first coordinate is actually u = log(r), so r = e^u
+	real r = m_rLogScale ? exp(p[1]) : p[1];
+	real theta = p[2];
+	real sint = sin(theta);
+	real Phi = m_PhiSpline(r) - 1.376427;
+	real m = m_mSpline(r);
+	real alpha = exp(Phi);
+	// Covariant metric elements
+	real g00 = -alpha * alpha;
+	real g11 = r / (r - 2 * m);
+	real g22 = r * r;
+	real g33 = g22 * sint * sint;
+	// If the log scale is set on, the true coordinate we are calculating the metric in is u = log(r), so dr = r du
+	if (m_rLogScale)
+	{
+		g11 *= (r * r);
+	}
+	return TwoIndex{{{g00, 0, 0, 0}, {0, g11, 0, 0}, {0, 0, g22, 0}, {0, 0, 0, g33}}};
+}
+TwoIndex BosonStarMetric::getMetric_uu(const Point &p) const
+{
+	// spherical coordinates
+	// If logscale is turned on, then the first coordinate is actually u = log(r), so r = e^u
+	real r = m_rLogScale ? exp(p[1]) : p[1];
+	r += 1e-10; // to avoid division by zero
+	real theta = p[2];
+	real sint = sin(theta);
+	real Phi = m_PhiSpline(r) - 1.376427;
+	real m = m_mSpline(r);
+	real alpha = exp(Phi);
+	// Contravariant metric elements
+	real g00 = -1. / (alpha * alpha);
+	real g11 = 1. - 2. * m / r;
+	real g22 = 1. / (r * r);
+	real g33 = g22 / (sint * sint);
+	// If the log scale is set on, the true coordinate we are calculating the metric in is u = log(r), so , so dr = r du
+	if (m_rLogScale)
+	{
+		g11 *= 1.0 / (r * r);
+	}
+
+	return TwoIndex{{{g00, 0, 0, 0}, {0, g11, 0, 0}, {0, 0, g22, 0}, {0, 0, 0, g33}}};
+}
+std::string BosonStarMetric::getFullDescriptionStr() const
+{
+	return "Boson star";
 }
 
 //// (New Metric classes can define their member functions here)

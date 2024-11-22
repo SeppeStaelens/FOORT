@@ -259,6 +259,18 @@ std::unique_ptr<Metric> Config::GetMetric(const ConfigCollection &theCfg)
 
 			TheMetric = std::unique_ptr<Metric>(new ST3CrMetric(ST3CrP, ST3Crq0, ST3Crlambda, rLogScale));
 		}
+		else if (MetricName == "bosonstar")
+		{
+			// The boson star with solitonic potential
+
+			// First setting to look up: using a logarithmic r coordinate or not.
+			// Don't need to output message if setting not found
+			bool rLogScale{false};
+			MetricSettings.LookupValue("RLogScale", rLogScale);
+
+			// All settings complete; create Metric object!
+			TheMetric = std::unique_ptr<Metric>(new BosonStarMetric(rLogScale));
+		}
 		//// METRIC ADD POINT B ////
 		// Add an else if clause to check for your new Metric object!
 		// To look for additional options in the metric configuration, use

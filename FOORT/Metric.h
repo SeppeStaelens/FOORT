@@ -3,6 +3,7 @@
 
 #include "Geometry.h" // Needed for basic tensor objects etc.
 
+#include "spline.h"
 #include <string> // for strings
 #include <vector> // needed for the (non-fixed size) vector of symmetries in the metric
 
@@ -248,6 +249,25 @@ private:
 	real get_omega(real r, real theta, real l) const;
 	real f_phi(real phi, real r, real theta, real l, real R) const;
 	real f_om_phi(real phi, real r, real theta, real l, real R) const;
+};
+
+// Boson star with solitonic potential (sigma = 0.06, phi_c = 0.044) (implementation by Seppe Staelens)
+class BosonStarMetric final : public Metric
+{
+public:
+	// Simple (default) constructor is all that is needed
+	BosonStarMetric(bool rLogScale = false);
+	// The override of the basic metric getter functions
+	TwoIndex getMetric_dd(const Point &p) const final;
+	TwoIndex getMetric_uu(const Point &p) const final;
+	// The override of the description string getter
+	std::string getFullDescriptionStr() const final;
+
+protected:
+	// The spline interpolator for Phi
+	tk::spline m_PhiSpline;
+	// The spline interpolator for m
+	tk::spline m_mSpline;
 };
 
 //// METRIC ADD POINT A ////
