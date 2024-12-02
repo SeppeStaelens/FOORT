@@ -51,7 +51,7 @@ void LoadPrecompiledOptions(std::unique_ptr<Metric> &theM, std::unique_ptr<Sourc
     // Syntax: KerrMetric (real a, bool rLogScale)
     // Syntax: RasheedLarsenMetric (real m, real a, real p, real q, bool rLogScale)
     // Syntax: FlatSpaceMetric()
-    theM = std::unique_ptr<Metric>(new KerrMetric(0.5, false));
+    theM = std::unique_ptr<Metric>(new KerrMetric(0.5, false, 1.));
 
     //// Source ////
     // Syntax: NoSource(const Metric *)

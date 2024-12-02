@@ -113,9 +113,9 @@ real SphericalHorizonMetric::getHorizonRadius() const
 /// </summary>
 
 // Constructor, must be passed the Kerr a parameter and whether we are using a logarithmic radial scale
-KerrMetric::KerrMetric(real aParam, bool rLogScale)
-	: m_aParam{aParam},
-	  SphericalHorizonMetric(1 + sqrt(1 - aParam * aParam), rLogScale) // initialize base class with horizon radius and rLogScale
+KerrMetric::KerrMetric(real aParam, bool rLogScale, real mParam)
+	: m_aParam{aParam}, m_mParam{mParam},
+	  SphericalHorizonMetric(mParam + mParam * sqrt(1 - aParam * aParam), rLogScale) // initialize base class with horizon radius and rLogScale
 {
 	// Make sure we are in four spacetime dimensions
 	if constexpr (dimension != 4)
@@ -142,16 +142,16 @@ TwoIndex KerrMetric::getMetric_dd(const Point &p) const
 	real theta = p[2];
 	real sint = sin(theta);
 	real cost = cos(theta);
-	real sigma = r * r + m_aParam * m_aParam * cost * cost;
-	real delta = r * r + m_aParam * m_aParam - 2. * r;
-	real A_ = (r * r + m_aParam * m_aParam) * (r * r + m_aParam * m_aParam) - delta * m_aParam * m_aParam * sint * sint;
+	real sigma = r * r + m_aParam * m_aParam * m_mParam * m_mParam * cost * cost;
+	real delta = r * r + m_aParam * m_aParam * m_mParam * m_mParam - 2. * m_mParam * r;
+	real A_ = (r * r + m_aParam * m_aParam * m_mParam * m_mParam) * (r * r + m_aParam * m_aParam * m_mParam * m_mParam) - delta * m_aParam * m_aParam * m_mParam * m_mParam * sint * sint;
 
 	// Covariant metric elements
-	real g00 = -(1. - 2. * r / sigma);
+	real g00 = -(1. - 2. * m_mParam * r / sigma);
 	real g11 = sigma / delta;
 	real g22 = sigma;
 	real g33 = A_ / sigma * sint * sint;
-	real g03 = -2. * m_aParam * r * sint * sint / sigma;
+	real g03 = -2. * m_aParam * pow(m_mParam, 3.) * r * sint * sint / sigma;
 
 	// If the log scale is set on, the true coordinate we are calculating the metric in is u = log(r), so dr = r du
 	if (m_rLogScale)
@@ -172,18 +172,17 @@ TwoIndex KerrMetric::getMetric_uu(const Point &p) const
 	real theta = p[2];
 	real sint = sin(theta);
 	real cost = cos(theta);
-	real sigma = r * r + m_aParam * m_aParam * cost * cost;
-	real delta = r * r + m_aParam * m_aParam - 2. * r;
-	real A_ = (r * r + m_aParam * m_aParam) * (r * r + m_aParam * m_aParam) - delta * m_aParam * m_aParam *
-																				  sint * sint;
+	real sigma = r * r + m_aParam * m_aParam * m_mParam * m_mParam * cost * cost;
+	real delta = r * r + m_aParam * m_aParam * m_mParam * m_mParam - 2. * m_mParam * r;
+	real A_ = (r * r + m_aParam * m_aParam * m_mParam * m_mParam) * (r * r + m_aParam * m_aParam * m_mParam * m_mParam) - delta * m_aParam * m_aParam * m_mParam * m_mParam * sint * sint;
 
 	// Contravariant metric elements
 	real g00 = -A_ / (sigma * delta);
 	real g11 = delta / sigma;
 	real g22 = 1. / sigma;
-	real g33 = (delta - m_aParam * m_aParam * sint * sint) /
+	real g33 = (delta - m_aParam * m_aParam * m_mParam * m_mParam * sint * sint) /
 			   (sigma * delta * sint * sint);
-	real g03 = -2. * m_aParam * r / (sigma * delta);
+	real g03 = -2. * m_aParam * m_mParam * r / (sigma * delta);
 
 	// If the log scale is set on, the true coordinate we are calculating the metric in is u = log(r), so , so dr = r du
 	if (m_rLogScale)
@@ -197,7 +196,7 @@ TwoIndex KerrMetric::getMetric_uu(const Point &p) const
 // Kerr description string; also gives a parameter value and whether we are using logarithmic radial coordinate
 std::string KerrMetric::getFullDescriptionStr() const
 {
-	return "Kerr (a = " + std::to_string(m_aParam) + ", " + (m_rLogScale ? "using logarithmic r coord" : "using normal r coord") + ")";
+	return "Kerr (a = " + std::to_string(m_aParam) + ", " + "m = " + std::to_string(m_mParam) + ", " + (m_rLogScale ? "using logarithmic r coord" : "using normal r coord") + ")";
 }
 
 /// <summary>

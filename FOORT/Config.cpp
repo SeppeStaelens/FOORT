@@ -110,14 +110,20 @@ std::unique_ptr<Metric> Config::GetMetric(const ConfigCollection &theCfg)
 
 			// First setting to look up: the a parameter
 			double theKerra{0.5};
+			double theKerrm{1.0};
 			if (!MetricSettings.LookupValue("a", theKerra))
 			{
 				ScreenOutput("Kerr: no value for a given. Using default: " + std::to_string(theKerra) + ".",
 							 Output_Other_Default);
 			}
+			if (!MetricSettings.LookupValue("m", theKerrm))
+			{
+				ScreenOutput("Kerr: no value for m given. Using default: " + std::to_string(theKerrm) + ".",
+							 Output_Other_Default);
+			}
 
 			// All settings complete; create Metric object!
-			TheMetric = std::unique_ptr<Metric>(new KerrMetric(theKerra, rLogScale));
+			TheMetric = std::unique_ptr<Metric>(new KerrMetric(theKerra, rLogScale, theKerrm));
 		}
 		else if (MetricName == "flatspace")
 		{

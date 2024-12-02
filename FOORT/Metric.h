@@ -77,16 +77,19 @@ protected:
 class KerrMetric final : public SphericalHorizonMetric
 {
 private:
-	// Rotation parameter for Kerr
-	// Note that this should be between -1 and 1 since M=1
+	// Mass-rescaled rotation parameter for Kerr
+	// Note that this should be between -1 and 1.
 	const real m_aParam;
+
+	// Mass parameter for Kerr. Default is 1.
+	const real m_mParam;
 
 public:
 	// No default constructor allowed, must specify a
 	KerrMetric() = delete;
 
 	// Constructor setting parameter a
-	KerrMetric(real aParam, bool rLogScale = false);
+	KerrMetric(real aParam, bool rLogScale = false, real mParam = 1.);
 
 	// The override of the basic metric getter functions
 	TwoIndex getMetric_dd(const Point &p) const final;
