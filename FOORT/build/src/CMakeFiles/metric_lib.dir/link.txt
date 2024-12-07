@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmetric_lib.a CMakeFiles/metric_lib.dir/Metric.cpp.o
-/usr/bin/ranlib libmetric_lib.a

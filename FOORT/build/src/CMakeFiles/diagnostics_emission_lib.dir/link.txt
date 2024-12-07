@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdiagnostics_emission_lib.a CMakeFiles/diagnostics_emission_lib.dir/DiagnosticsEmission.cpp.o
-/usr/bin/ranlib libdiagnostics_emission_lib.a

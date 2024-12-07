@@ -1,2 +1,0 @@
-/usr/bin/ar qc libviewscreen_lib.a CMakeFiles/viewscreen_lib.dir/Viewscreen.cpp.o
-/usr/bin/ranlib libviewscreen_lib.a

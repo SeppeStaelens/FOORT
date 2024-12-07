@@ -930,8 +930,8 @@ BosonStarMetric::BosonStarMetric(bool rLogScale) : Metric(rLogScale)
 	// Boson star has a Killing vector along t and phi, so we initialize the symmetries accordingly
 	m_Symmetries = {0, 3};
 	// We have to interpolate the metric from the data files
-	std::ifstream Phi_file("BosonStar/Phi.dat");
-	std::ifstream m_file("BosonStar/m.dat");
+	std::ifstream Phi_file("../BosonStar/Phi.dat");
+	std::ifstream m_file("../BosonStar/m.dat");
 	if (!Phi_file.is_open() || !m_file.is_open())
 	{
 		std::cerr << "Error reading BosonStar files!" << std::endl;

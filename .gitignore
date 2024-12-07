@@ -9,6 +9,11 @@ FOORT/FOORT
 *vscode*
 PostProc/*
 FOORT/Output/BS*
+build/*
+bin/*
+FOORT.zip
+docs/latex/*
+!docs/latex/refman.pdf
 
 # User-specific files
 *.rsuser

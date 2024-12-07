@@ -1,2 +1,0 @@
-/usr/bin/ar qc libterminations_lib.a CMakeFiles/terminations_lib.dir/Terminations.cpp.o
-/usr/bin/ranlib libterminations_lib.a
