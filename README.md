@@ -48,4 +48,4 @@ See in the [output](FOORT/Output) file for sample output files and Mathematica n
 
 See the [Documentation](./docs/Documentation.pdf) for more information on configuration options, how to add your own Metric, Diagnostic, or Termination, and how to process output.
 
-You can consult the `doxygen` created documentation <a href="https://github.com/SeppeStaelens/FOORT/docs/html/index.html" target="_blank">here</a> to find out more about the structure of the code. A PDF version of the latter is also availabel in `docs/latex`.
+You can consult the `doxygen` created documentation <a href="https://github.com/SeppeStaelens/FOORT/tree/from_config_reader/docs/html/index.html" target="_blank">here</a> to find out more about the structure of the code. A PDF version of the latter is also availabel in `docs/latex`.
