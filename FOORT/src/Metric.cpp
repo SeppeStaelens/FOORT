@@ -6,7 +6,7 @@
 #include <cmath>	 // needed for sqrt() and sin() etc (only on Linux)
 #include <algorithm> // needed for std::find
 
-#include "spline.h" // needed for spline interpolation
+#include "Spline.h" // needed for spline interpolation
 #include <sstream>	// needed for string stream
 
 /// <summary>

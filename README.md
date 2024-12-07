@@ -10,7 +10,27 @@ See the [Documentation](./Documentation.pdf) for more information on configurati
 
 Use the Foort.sln Visual Studio solution file and compile the FOORT project therein.
 
-### LINUX:
+### LINUX / MAC:
+
+The executable can be built with `cmake`, which should be installed first. One can then run
+
+```
+cmake -S . -B build
+cmake --build build
+```
+
+which will cause the executable to be stored in the `bin` subdirectory.
+
+#### MacOS Troubleshooting
+
+```
+export CXX=/opt/homebrew/opt/llvm/bin/clang++
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+```
+
+Alternatively, old Makefiles can be found in XXXX
+
+OLD BELOW
 
 All code files are in the `FOORT` subfolder. Run `make` in this folder to compile. You will need to have installed the libconfig library beforehand (see the [Documentation](./Documentation.pdf)).
 

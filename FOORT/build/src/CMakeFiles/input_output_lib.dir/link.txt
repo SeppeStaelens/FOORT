@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinput_output_lib.a CMakeFiles/input_output_lib.dir/InputOutput.cpp.o
+/usr/bin/ranlib libinput_output_lib.a

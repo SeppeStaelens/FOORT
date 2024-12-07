@@ -1,0 +1,986 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 23.6.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/g++-14 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/3.31.2/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94"
+      binary: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-lm -lstdc++fs"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "14.6"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fa39c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fa39c.dir/build.make CMakeFiles/cmTC_fa39c.dir/build
+        Building CXX object CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/homebrew/bin/g++-14   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6   -v -Wl,-v -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/g++-14
+        Target: aarch64-apple-darwin23
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran,m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Homebrew GCC 14.2.0_1) 
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/'
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/cc1plus -quiet -v -iprefix /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/ -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_fa39c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=14.6 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s
+        GNU C++17 (Homebrew GCC 14.2.0_1) version 14.2.0 (aarch64-apple-darwin23)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/local/include"
+        ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed"
+        ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks
+        End of search list.
+        Compiler executable checksum: c67e8042b700d4345ad07bf626b550f9
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/'
+         as -arch arm64 -v -mmacosx-version-min=14.6 -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s
+        Apple clang version 16.0.0 (clang-1600.0.26.4)
+        Target: arm64-apple-darwin23.6.0
+        Thread model: posix
+        InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple arm64-apple-macosx14.6.0 -target-sdk-version=15.1 -filetype obj -main-file-name ccATXcCW.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -fdebug-compilation-dir=/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94 -dwarf-debug-producer "Apple clang version 16.0.0 (clang-1600.0.26.4)" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_fa39c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa39c.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/g++-14
+        COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/lto-wrapper
+        Target: aarch64-apple-darwin23
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran,m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Homebrew GCC 14.2.0_1) 
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'cmTC_fa39c' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_fa39c.'
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2 -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_fa39c -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        collect2 version 14.2.0
+        /usr/bin/ld -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_fa39c -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 07:38:57 Oct  4 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.8)
+        Library search paths:
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks
+        /opt/homebrew/bin/g++-14  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -lm -lstdc++fs -v -Wl,-v CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fa39c
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:113 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14]
+          add: [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23]
+          add: [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward]
+          add: [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include]
+          add: [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        end of search list found
+        collapse include dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14]
+        collapse include dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin23]
+        collapse include dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/backward]
+        collapse include dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include]
+        collapse include dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        implicit include dirs: [/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14;/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/aarch64-apple-darwin23;/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/backward;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fa39c/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fa39c.dir/build.make CMakeFiles/cmTC_fa39c.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/homebrew/bin/g++-14   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6   -v -Wl -v -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/g++-14]
+        ignore line: [Target: aarch64-apple-darwin23]
+        ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (Homebrew GCC 14.2.0_1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/']
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/cc1plus -quiet -v -iprefix /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/ -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_fa39c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=14.6 -mcpu=apple-m1 -mlittle-endian -mabi=lp64 -version -o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s]
+        ignore line: [GNU C++17 (Homebrew GCC 14.2.0_1) version 14.2.0 (aarch64-apple-darwin23)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../aarch64-apple-darwin23/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14]
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/aarch64-apple-darwin23]
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../../../../include/c++/14/backward]
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include]
+        ignore line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: c67e8042b700d4345ad07bf626b550f9]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/']
+        ignore line: [ as -arch arm64 -v -mmacosx-version-min=14.6 -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.4)]
+        ignore line: [Target: arm64-apple-darwin23.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple arm64-apple-macosx14.6.0 -target-sdk-version=15.1 -filetype obj -main-file-name ccATXcCW.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -fdebug-compilation-dir=/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-MGGF94 -dwarf-debug-producer "Apple clang version 16.0.0 (clang-1600.0.26.4)" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o /var/folders/vq/_ms1s9j51m14tjk2yqc9vpbh0000gn/T//ccATXcCW.s]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=14.6'  '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_fa39c]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa39c.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/g++-14]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/lto-wrapper]
+        ignore line: [Target: aarch64-apple-darwin23]
+        ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (Homebrew GCC 14.2.0_1) ]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'cmTC_fa39c' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_fa39c.']
+        link line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2 -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_fa39c -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [14.6] ==> ignore
+          arg [0.0] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fa39c] ==> ignore
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc]
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..]
+          arg [-lemutls_w] ==> lib [emutls_w]
+          arg [-lheapt_w] ==> lib [heapt_w]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-lstdc++fs] ==> lib [stdc++fs]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lSystem] ==> lib [System]
+          arg [-no_compact_unwind] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@loader_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current] ==> ignore
+        ignore line: [collect2 version 14.2.0]
+        ignore line: [/usr/bin/ld -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_fa39c -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_fa39c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+        linker tool for 'CXX': /usr/bin/ld
+        Library search paths: [;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        remove lib [System]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        implicit libs: [emutls_w;heapt_w;stdc++fs;stdc++;gcc]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 07:38:57 Oct  4 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.8)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:252 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "src/CMakeLists.txt:52 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO"
+      binary: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 -fopenmp -O3 -Wno-unused-result"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-lm -lstdc++fs"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "14.6"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f5c90/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f5c90.dir/build.make CMakeFiles/cmTC_f5c90.dir/build
+        Building CXX object CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o
+        /opt/homebrew/bin/g++-14   -std=c++17 -fopenmp -O3 -Wno-unused-result -fopenmp -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -o CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -c /Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_f5c90
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5c90.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/opt/homebrew/bin/g++-14
+        COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/lto-wrapper
+        Target: aarch64-apple-darwin23
+        Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran,m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Homebrew GCC 14.2.0_1) 
+        COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../
+        COLLECT_GCC_OPTIONS='-std=c++17' '-O3' '-Wno-unused-result' '-fopenmp' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'cmTC_f5c90' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f5c90.'
+         /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2 -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_f5c90 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -lstdc++ -lgomp -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        collect2 version 14.2.0
+        /usr/bin/ld -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_f5c90 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -lstdc++ -lgomp -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 07:38:57 Oct  4 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.8)
+        Library search paths:
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc
+        	/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks
+        /opt/homebrew/bin/g++-14 -std=c++17 -fopenmp -O3 -Wno-unused-result -fopenmp -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -lm -lstdc++fs  -v -Wl,-v CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -o cmTC_f5c90
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:296 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "src/CMakeLists.txt:52 (find_package)"
+    message: |
+      Parsed CXX OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f5c90/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f5c90.dir/build.make CMakeFiles/cmTC_f5c90.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o]
+        ignore line: [/opt/homebrew/bin/g++-14   -std=c++17 -fopenmp -O3 -Wno-unused-result -fopenmp -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -o CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -c /Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-9bqNQO/OpenMPTryFlag.cpp]
+        ignore line: [Linking CXX executable cmTC_f5c90]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5c90.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/homebrew/bin/g++-14]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/lto-wrapper]
+        ignore line: [Target: aarch64-apple-darwin23]
+        ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran m2 --program-suffix=-14 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 14.2.0_1' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin23 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (Homebrew GCC 14.2.0_1) ]
+        ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=c++17' '-O3' '-Wno-unused-result' '-fopenmp' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk' '-v' '-o' 'cmTC_f5c90' '-mmacosx-version-min=14.6' '-asm_macosx_version_min=14.6' '-nodefaultexport' '-mcpu=apple-m1' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_f5c90.']
+        link line: [ /opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2 -demangle -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -platform_version macos 14.6 0.0 -o cmTC_f5c90 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14 -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../.. -lemutls_w -lheapt_w -search_paths_first -headerpad_max_install_names -lstdc++fs -v CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o -lstdc++ -lgomp -lgcc -lSystem -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14 -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../libexec/gcc/aarch64-apple-darwin23/14/collect2] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [14.6] ==> ignore
+          arg [0.0] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_f5c90] ==> ignore
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc]
+          arg [-L/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..] ==> dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..]
+          arg [-lemutls_w] ==> lib [emutls_w]
+          arg [-lheapt_w] ==> lib [heapt_w]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-lstdc++fs] ==> lib [stdc++fs]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f5c90.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lgomp] ==> lib [gomp]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lSystem] ==> lib [System]
+          arg [-no_compact_unwind] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@loader_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current] ==> ignore
+        Library search paths: [;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        remove lib [System]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/bin/../lib/gcc/current/gcc/aarch64-apple-darwin23/14/../../..] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc]
+        collapse library dir [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current] ==> [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+        implicit libs: [emutls_w;heapt_w;stdc++fs;stdc++;gomp;gcc]
+        implicit objs: []
+        implicit dirs: [/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/lib/swift]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:456 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:596 (_OPENMP_GET_SPEC_DATE)"
+      - "src/CMakeLists.txt:52 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-oevKK0"
+      binary: "/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-oevKK0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 -fopenmp -O3 -Wno-unused-result"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-lm -lstdc++fs"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "14.6"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-oevKK0'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76d57/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76d57.dir/build.make CMakeFiles/cmTC_76d57.dir/build
+        Building CXX object CMakeFiles/cmTC_76d57.dir/OpenMPCheckVersion.cpp.o
+        /opt/homebrew/bin/g++-14   -std=c++17 -fopenmp -O3 -Wno-unused-result -fopenmp -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -o CMakeFiles/cmTC_76d57.dir/OpenMPCheckVersion.cpp.o -c /Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-oevKK0/OpenMPCheckVersion.cpp
+        In file included from /Users/seppestaelens/Documents/GitHubRepos/FOORT/FOORT/build/CMakeFiles/CMakeScratch/TryCompile-oevKK0/OpenMPCheckVersion.cpp:2:
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:83:8: error: 'FILE' does not name a type
+           83 | extern FILE *__stdinp;
+              |        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:81:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+           80 | #include <sys/_types/_seek_set.h>
+          +++ |+#include <cstdio>
+           81 | 
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:84:8: error: 'FILE' does not name a type
+           84 | extern FILE *__stdoutp;
+              |        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:84:8: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:85:8: error: 'FILE' does not name a type
+           85 | extern FILE *__stderrp;
+              |        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:85:8: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:148:10: error: variable or field 'clearerr' declared void
+          148 | void     clearerr(FILE *);
+              |          ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:148:19: error: 'FILE' was not declared in this scope
+          148 | void     clearerr(FILE *);
+              |                   ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:148:19: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:148:25: error: expected primary-expression before ')' token
+          148 | void     clearerr(FILE *);
+              |                         ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:149:17: error: 'FILE' was not declared in this scope
+          149 | int      fclose(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:149:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:149:23: error: expected primary-expression before ')' token
+          149 | int      fclose(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:150:15: error: 'FILE' was not declared in this scope
+          150 | int      feof(FILE *);
+              |               ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:150:15: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:150:21: error: expected primary-expression before ')' token
+          150 | int      feof(FILE *);
+              |                     ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:151:17: error: 'FILE' was not declared in this scope
+          151 | int      ferror(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:151:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:151:23: error: expected primary-expression before ')' token
+          151 | int      ferror(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:152:17: error: 'FILE' was not declared in this scope
+          152 | int      fflush(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:152:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:152:23: error: expected primary-expression before ')' token
+          152 | int      fflush(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:153:16: error: 'FILE' was not declared in this scope
+          153 | int      fgetc(FILE *);
+              |                ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:153:16: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:153:22: error: expected primary-expression before ')' token
+          153 | int      fgetc(FILE *);
+              |                      ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:18: error: 'FILE' was not declared in this scope
+          154 | int      fgetpos(FILE * __restrict, fpos_t *);
+              |                  ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:18: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:35: error: expected primary-expression before ',' token
+          154 | int      fgetpos(FILE * __restrict, fpos_t *);
+              |                                   ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:37: error: 'fpos_t' was not declared in this scope
+          154 | int      fgetpos(FILE * __restrict, fpos_t *);
+              |                                     ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:37: note: 'fpos_t' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:45: error: expected primary-expression before ')' token
+          154 | int      fgetpos(FILE * __restrict, fpos_t *);
+              |                                             ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:154:45: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:155:40: error: 'FILE' has not been declared
+          155 | char    *fgets(char * __restrict, int, FILE *);
+              |                                        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:159:1: error: 'FILE' does not name a type
+          159 | FILE    *fopen(const char * __restrict __filename, const char * __restrict __mode) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fopen));
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:159:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:18: error: 'FILE' was not declared in this scope
+          161 | int      fprintf(FILE * __restrict, const char * __restrict, ...) __printflike(2, 3);
+              |                  ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:18: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:35: error: expected primary-expression before ',' token
+          161 | int      fprintf(FILE * __restrict, const char * __restrict, ...) __printflike(2, 3);
+              |                                   ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:37: error: expected primary-expression before 'const'
+          161 | int      fprintf(FILE * __restrict, const char * __restrict, ...) __printflike(2, 3);
+              |                                     ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:62: error: expected primary-expression before '...' token
+          161 | int      fprintf(FILE * __restrict, const char * __restrict, ...) __printflike(2, 3);
+              |                                                              ^~~
+        In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk/usr/include/sys/_types/_seek_set.h:32,
+                         from /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:80:
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:67: error: attributes after parenthesized initializer ignored [-fpermissive]
+          161 | int      fprintf(FILE * __restrict, const char * __restrict, ...) __printflike(2, 3);
+              |                                                                   ^~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:161:67: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:162:21: error: 'FILE' has not been declared
+          162 | int      fputc(int, FILE *);
+              |                     ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:163:41: error: 'FILE' has not been declared
+          163 | int      fputs(const char * __restrict, FILE * __restrict) __DARWIN_ALIAS(fputs);
+              |                                         ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:164:1: error: 'size_t' does not name a type
+          164 | size_t   fread(void * __restrict __ptr, size_t __size, size_t __nitems, FILE * __restrict __stream);
+              | ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:81:1: note: 'size_t' is defined in header '<cstddef>'; this is probably fixable by adding '#include <cstddef>'
+           80 | #include <sys/_types/_seek_set.h>
+          +++ |+#include <cstddef>
+           81 | 
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:165:1: error: 'FILE' does not name a type
+          165 | FILE    *freopen(const char * __restrict, const char * __restrict,
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:165:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:17: error: 'FILE' was not declared in this scope
+          167 | int      fscanf(FILE * __restrict, const char * __restrict, ...) __scanflike(2, 3);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:34: error: expected primary-expression before ',' token
+          167 | int      fscanf(FILE * __restrict, const char * __restrict, ...) __scanflike(2, 3);
+              |                                  ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:36: error: expected primary-expression before 'const'
+          167 | int      fscanf(FILE * __restrict, const char * __restrict, ...) __scanflike(2, 3);
+              |                                    ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:61: error: expected primary-expression before '...' token
+          167 | int      fscanf(FILE * __restrict, const char * __restrict, ...) __scanflike(2, 3);
+              |                                                             ^~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:66: error: attributes after parenthesized initializer ignored [-fpermissive]
+          167 | int      fscanf(FILE * __restrict, const char * __restrict, ...) __scanflike(2, 3);
+              |                                                                  ^~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:167:66: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:16: error: 'FILE' was not declared in this scope
+          168 | int      fseek(FILE *, long, int);
+              |                ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:16: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:22: error: expected primary-expression before ',' token
+          168 | int      fseek(FILE *, long, int);
+              |                      ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:24: error: expected primary-expression before 'long'
+          168 | int      fseek(FILE *, long, int);
+              |                        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:30: error: expected primary-expression before 'int'
+          168 | int      fseek(FILE *, long, int);
+              |                              ^~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:168:33: error: expression list treated as compound expression in initializer [-fpermissive]
+          168 | int      fseek(FILE *, long, int);
+              |                                 ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:169:18: error: 'FILE' was not declared in this scope
+          169 | int      fsetpos(FILE *, const fpos_t *);
+              |                  ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:169:18: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:169:24: error: expected primary-expression before ',' token
+          169 | int      fsetpos(FILE *, const fpos_t *);
+              |                        ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:169:26: error: expected primary-expression before 'const'
+          169 | int      fsetpos(FILE *, const fpos_t *);
+              |                          ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:169:40: error: expression list treated as compound expression in initializer [-fpermissive]
+          169 | int      fsetpos(FILE *, const fpos_t *);
+              |                                        ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:170:16: error: 'FILE' was not declared in this scope
+          170 | long     ftell(FILE *);
+              |                ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:170:16: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:170:22: error: expected primary-expression before ')' token
+          170 | long     ftell(FILE *);
+              |                      ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:171:1: error: 'size_t' does not name a type
+          171 | size_t   fwrite(const void * __restrict __ptr, size_t __size, size_t __nitems, FILE * __restrict __stream) __DARWIN_ALIAS(fwrite);
+              | ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:171:1: note: 'size_t' is defined in header '<cstddef>'; this is probably fixable by adding '#include <cstddef>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:172:15: error: 'FILE' was not declared in this scope
+          172 | int      getc(FILE *);
+              |               ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:172:15: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:172:21: error: expected primary-expression before ')' token
+          172 | int      getc(FILE *);
+              |                     ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:184:20: error: 'FILE' has not been declared
+          184 | int      putc(int, FILE *);
+              |                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:189:10: error: variable or field 'rewind' declared void
+          189 | void     rewind(FILE *);
+              |          ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:189:17: error: 'FILE' was not declared in this scope
+          189 | void     rewind(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:189:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:189:23: error: expected primary-expression before ')' token
+          189 | void     rewind(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:191:10: error: variable or field 'setbuf' declared void
+          191 | void     setbuf(FILE * __restrict, char * __restrict);
+              |          ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:191:17: error: 'FILE' was not declared in this scope
+          191 | void     setbuf(FILE * __restrict, char * __restrict);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:191:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:191:34: error: expected primary-expression before ',' token
+          191 | void     setbuf(FILE * __restrict, char * __restrict);
+              |                                  ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:191:36: error: expected primary-expression before 'char'
+          191 | void     setbuf(FILE * __restrict, char * __restrict);
+              |                                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:18: error: 'FILE' was not declared in this scope
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                  ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:18: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:35: error: expected primary-expression before ',' token
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                                   ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:37: error: expected primary-expression before 'char'
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                                     ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:56: error: expected primary-expression before 'int'
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                                                        ^~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:61: error: 'size_t' was not declared in this scope
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                                                             ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:61: note: 'size_t' is defined in header '<cstddef>'; this is probably fixable by adding '#include <cstddef>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:192:67: error: expression list treated as compound expression in initializer [-fpermissive]
+          192 | int      setvbuf(FILE * __restrict, char * __restrict, int, size_t);
+              |                                                                   ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:203:1: error: 'FILE' does not name a type
+          203 | FILE    *tmpfile(void);
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:203:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:213:22: error: 'FILE' has not been declared
+          213 | int      ungetc(int, FILE *);
+              |                      ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:19: error: 'FILE' was not declared in this scope
+          214 | int      vfprintf(FILE * __restrict, const char * __restrict, __gnuc_va_list) __printflike(2, 0);
+              |                   ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:19: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:36: error: expected primary-expression before ',' token
+          214 | int      vfprintf(FILE * __restrict, const char * __restrict, __gnuc_va_list) __printflike(2, 0);
+              |                                    ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:38: error: expected primary-expression before 'const'
+          214 | int      vfprintf(FILE * __restrict, const char * __restrict, __gnuc_va_list) __printflike(2, 0);
+              |                                      ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:77: error: expected primary-expression before ')' token
+          214 | int      vfprintf(FILE * __restrict, const char * __restrict, __gnuc_va_list) __printflike(2, 0);
+              |                                                                             ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:79: error: attributes after parenthesized initializer ignored [-fpermissive]
+          214 | int      vfprintf(FILE * __restrict, const char * __restrict, __gnuc_va_list) __printflike(2, 0);
+              |                                                                               ^~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:214:79: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:242:1: error: 'FILE' does not name a type
+          242 | FILE    *fdopen(int, const char *) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(fdopen));
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:242:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:244:17: error: 'FILE' was not declared in this scope
+          244 | int      fileno(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:244:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:244:23: error: expected primary-expression before ')' token
+          244 | int      fileno(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:255:17: error: 'FILE' was not declared in this scope
+          255 | int      pclose(FILE *) __swift_unavailable("Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)");
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:255:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:255:23: error: expected primary-expression before ')' token
+          255 | int      pclose(FILE *) __swift_unavailable("Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)");
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:259:1: error: 'FILE' does not name a type
+          259 | FILE    *popen(const char *, const char *) __DARWIN_ALIAS_STARTING(__MAC_10_6, __IPHONE_2_0, __DARWIN_ALIAS(popen)) __swift_unavailable("Use posix_spawn APIs or NSTask instead. (On iOS, process spawning is unavailable.)");
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:259:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:274:17: error: 'FILE' was not declared in this scope
+          274 | int     __srget(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:274:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:274:23: error: expected primary-expression before ')' token
+          274 | int     __srget(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:20: error: 'FILE' was not declared in this scope
+          275 | int     __svfscanf(FILE *, const char *, __gnuc_va_list) __scanflike(2, 0);
+              |                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:20: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:26: error: expected primary-expression before ',' token
+          275 | int     __svfscanf(FILE *, const char *, __gnuc_va_list) __scanflike(2, 0);
+              |                          ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:28: error: expected primary-expression before 'const'
+          275 | int     __svfscanf(FILE *, const char *, __gnuc_va_list) __scanflike(2, 0);
+              |                            ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:56: error: expected primary-expression before ')' token
+          275 | int     __svfscanf(FILE *, const char *, __gnuc_va_list) __scanflike(2, 0);
+              |                                                        ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:58: error: attributes after parenthesized initializer ignored [-fpermissive]
+          275 | int     __svfscanf(FILE *, const char *, __gnuc_va_list) __scanflike(2, 0);
+              |                                                          ^~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:275:58: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:276:22: error: 'FILE' has not been declared
+          276 | int     __swbuf(int, FILE *);
+              |                      ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:285:44: error: 'FILE' has not been declared
+          285 | __header_always_inline int __sputc(int _c, FILE *_p) {
+              |                                            ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h: In function 'int __sputc(int, int*)':
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:286:19: error: request for member '_w' in '* _p', which is of non-class type 'int'
+          286 |         if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\\n'))
+              |                   ^~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:286:35: error: request for member '_w' in '* _p', which is of non-class type 'int'
+          286 |         if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\\n'))
+              |                                   ^~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:286:45: error: request for member '_lbfsize' in '* _p', which is of non-class type 'int'
+          286 |         if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\\n'))
+              |                                             ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:287:30: error: request for member '_p' in '* _p', which is of non-class type 'int'
+          287 |                 return (*_p->_p++ = _c);
+              |                              ^~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h: At global scope:
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:311:10: error: variable or field 'flockfile' declared void
+          311 | void     flockfile(FILE *);
+              |          ^~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:311:20: error: 'FILE' was not declared in this scope
+          311 | void     flockfile(FILE *);
+              |                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:311:20: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:311:26: error: expected primary-expression before ')' token
+          311 | void     flockfile(FILE *);
+              |                          ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:312:23: error: 'FILE' was not declared in this scope
+          312 | int      ftrylockfile(FILE *);
+              |                       ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:312:23: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:312:29: error: expected primary-expression before ')' token
+          312 | int      ftrylockfile(FILE *);
+              |                             ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:313:10: error: variable or field 'funlockfile' declared void
+          313 | void     funlockfile(FILE *);
+              |          ^~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:313:22: error: 'FILE' was not declared in this scope
+          313 | void     funlockfile(FILE *);
+              |                      ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:313:22: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:313:28: error: expected primary-expression before ')' token
+          313 | void     funlockfile(FILE *);
+              |                            ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:314:24: error: 'FILE' was not declared in this scope
+          314 | int      getc_unlocked(FILE *);
+              |                        ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:314:24: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:314:30: error: expected primary-expression before ')' token
+          314 | int      getc_unlocked(FILE *);
+              |                              ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:316:29: error: 'FILE' has not been declared
+          316 | int      putc_unlocked(int, FILE *);
+              |                             ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:321:15: error: 'FILE' was not declared in this scope
+          321 | int      getw(FILE *);
+              |               ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:321:15: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:321:21: error: expected primary-expression before ')' token
+          321 | int      getw(FILE *);
+              |                     ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:322:20: error: 'FILE' has not been declared
+          322 | int      putw(int, FILE *);
+              |                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:17: error: 'FILE' was not declared in this scope
+          354 | int      fseeko(FILE * __stream, off_t __offset, int __whence);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:24: error: '__stream' was not declared in this scope
+          354 | int      fseeko(FILE * __stream, off_t __offset, int __whence);
+              |                        ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:40: error: expected primary-expression before '__offset'
+          354 | int      fseeko(FILE * __stream, off_t __offset, int __whence);
+              |                                        ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:50: error: expected primary-expression before 'int'
+          354 | int      fseeko(FILE * __stream, off_t __offset, int __whence);
+              |                                                  ^~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:354:62: error: expression list treated as compound expression in initializer [-fpermissive]
+          354 | int      fseeko(FILE * __stream, off_t __offset, int __whence);
+              |                                                              ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:355:17: error: 'FILE' was not declared in this scope
+          355 | off_t    ftello(FILE * __stream);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:355:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:355:24: error: '__stream' was not declared in this scope
+          355 | off_t    ftello(FILE * __stream);
+              |                        ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:361:44: error: 'size_t' has not been declared
+          361 | int      snprintf(char * __restrict __str, size_t __size, const char * __restrict __format, ...) __printflike(3, 4);
+              |                                            ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:18: error: 'FILE' was not declared in this scope
+          362 | int      vfscanf(FILE * __restrict __stream, const char * __restrict __format, __gnuc_va_list) __scanflike(2, 0);
+              |                  ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:18: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:36: error: '__stream' was not declared in this scope
+          362 | int      vfscanf(FILE * __restrict __stream, const char * __restrict __format, __gnuc_va_list) __scanflike(2, 0);
+              |                                    ^~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:46: error: expected primary-expression before 'const'
+          362 | int      vfscanf(FILE * __restrict __stream, const char * __restrict __format, __gnuc_va_list) __scanflike(2, 0);
+              |                                              ^~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:94: error: expected primary-expression before ')' token
+          362 | int      vfscanf(FILE * __restrict __stream, const char * __restrict __format, __gnuc_va_list) __scanflike(2, 0);
+              |                                                                                              ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:96: error: attributes after parenthesized initializer ignored [-fpermissive]
+          362 | int      vfscanf(FILE * __restrict __stream, const char * __restrict __format, __gnuc_va_list) __scanflike(2, 0);
+              |                                                                                                ^~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:362:96: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:364:45: error: 'size_t' has not been declared
+          364 | int      vsnprintf(char * __restrict __str, size_t __size, const char * __restrict __format, __gnuc_va_list) __printflike(3, 0);
+              |                                             ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:379:71: error: expected initializer before '__OSX_AVAILABLE_STARTING'
+          379 | int     dprintf(int, const char * __restrict, ...) __printflike(2, 3) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:380:83: error: expected initializer before '__OSX_AVAILABLE_STARTING'
+          380 | int     vdprintf(int, const char * __restrict, __gnuc_va_list) __printflike(2, 0) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:381:46: error: 'size_t' has not been declared
+          381 | ssize_t getdelim(char ** __restrict __linep, size_t * __restrict __linecapp, int __delimiter, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                              ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:381:95: error: 'FILE' has not been declared
+          381 | ssize_t getdelim(char ** __restrict __linep, size_t * __restrict __linecapp, int __delimiter, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                                               ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:381:123: error: expected initializer before '__OSX_AVAILABLE_STARTING'
+          381 | ssize_t getdelim(char ** __restrict __linep, size_t * __restrict __linecapp, int __delimiter, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                                                                           ^~~~~~~~~~~~~~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:382:45: error: 'size_t' has not been declared
+          382 | ssize_t getline(char ** __restrict __linep, size_t * __restrict __linecapp, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                             ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:382:77: error: 'FILE' has not been declared
+          382 | ssize_t getline(char ** __restrict __linep, size_t * __restrict __linecapp, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                             ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:382:105: error: expected initializer before '__OSX_AVAILABLE_STARTING'
+          382 | ssize_t getline(char ** __restrict __linep, size_t * __restrict __linecapp, FILE * __restrict __stream) __OSX_AVAILABLE_STARTING(__MAC_10_7, __IPHONE_4_3);
+              |                                                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:383:1: error: 'FILE' does not name a type
+          383 | FILE *fmemopen(void * __restrict __buf, size_t __size, const char * __restrict __mode) __API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:383:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:384:1: error: 'FILE' does not name a type
+          384 | FILE *open_memstream(char **__bufp, size_t *__sizep) __API_AVAILABLE(macos(10.13), ios(11.0), tvos(11.0), watchos(4.0));
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:384:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:17: error: 'FILE' was not declared in this scope
+          399 | char    *fgetln(FILE *, size_t *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:23: error: expected primary-expression before ',' token
+          399 | char    *fgetln(FILE *, size_t *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:25: error: 'size_t' was not declared in this scope
+          399 | char    *fgetln(FILE *, size_t *);
+              |                         ^~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:25: note: 'size_t' is defined in header '<cstddef>'; this is probably fixable by adding '#include <cstddef>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:33: error: expected primary-expression before ')' token
+          399 | char    *fgetln(FILE *, size_t *);
+              |                                 ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:399:33: error: expression list treated as compound expression in initializer [-fpermissive]
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:401:17: error: 'FILE' was not declared in this scope
+          401 | int      fpurge(FILE *);
+              |                 ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:401:17: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:401:23: error: expected primary-expression before ')' token
+          401 | int      fpurge(FILE *);
+              |                       ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:10: error: variable or field 'setbuffer' declared void
+          402 | void     setbuffer(FILE *, char *, int);
+              |          ^~~~~~~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:20: error: 'FILE' was not declared in this scope
+          402 | void     setbuffer(FILE *, char *, int);
+              |                    ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:20: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:26: error: expected primary-expression before ',' token
+          402 | void     setbuffer(FILE *, char *, int);
+              |                          ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:28: error: expected primary-expression before 'char'
+          402 | void     setbuffer(FILE *, char *, int);
+              |                            ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:402:36: error: expected primary-expression before 'int'
+          402 | void     setbuffer(FILE *, char *, int);
+              |                                    ^~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:403:21: error: 'FILE' was not declared in this scope
+          403 | int      setlinebuf(FILE *);
+              |                     ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:403:21: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:403:27: error: expected primary-expression before ')' token
+          403 | int      setlinebuf(FILE *);
+              |                           ^
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:410:1: error: 'FILE' does not name a type
+          410 | FILE    *funopen(const void *,
+              | ^~~~
+        /opt/homebrew/Cellar/gcc/14.2.0_1/lib/gcc/current/gcc/aarch64-apple-darwin23/14/include-fixed/stdio.h:410:1: note: 'FILE' is defined in header '<cstdio>'; this is probably fixable by adding '#include <cstdio>'
+        make[1]: *** [CMakeFiles/cmTC_76d57.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_76d57/fast] Error 2
+        
+      exitCode: 2
+...

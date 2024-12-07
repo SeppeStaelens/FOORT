@@ -1,0 +1,2 @@
+/usr/bin/ar qc libintegrators_lib.a CMakeFiles/integrators_lib.dir/Integrators.cpp.o
+/usr/bin/ranlib libintegrators_lib.a

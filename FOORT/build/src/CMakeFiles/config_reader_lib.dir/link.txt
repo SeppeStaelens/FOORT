@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconfig_reader_lib.a CMakeFiles/config_reader_lib.dir/ConfigReader.cpp.o
+/usr/bin/ranlib libconfig_reader_lib.a

@@ -1,4 +1,4 @@
-#include "Diagnostics_Emission.h" // We are defining EmissionModel and FluidVelocityModel functions here
+#include "DiagnosticsEmission.h" // We are defining EmissionModel and FluidVelocityModel functions here
 
 #include "Integrators.h" // for Integrators::Derivative_hval, Integrators::delta_nodiv0
 

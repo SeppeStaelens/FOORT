@@ -11,7 +11,7 @@
 #include "Metric.h"		 // for metric
 #include "InputOutput.h" // for ScreenOutput
 
-#include "Diagnostics_Emission.h" // Emission models
+#include "DiagnosticsEmission.h" // Emission models
 
 #include <cstdint> // for std::uint16_t
 #include <string>  // for strings

@@ -3,7 +3,7 @@
 
 #include "Geometry.h" // Needed for basic tensor objects etc.
 
-#include "spline.h"
+#include "Spline.h"
 #include <string> // for strings
 #include <vector> // needed for the (non-fixed size) vector of symmetries in the metric
 

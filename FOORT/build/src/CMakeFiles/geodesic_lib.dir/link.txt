@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgeodesic_lib.a CMakeFiles/geodesic_lib.dir/Geodesic.cpp.o
+/usr/bin/ranlib libgeodesic_lib.a

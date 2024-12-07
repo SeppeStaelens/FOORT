@@ -1,5 +1,5 @@
-#include "Diagnostics.h"		  // We are defining Diagnostic member functions here
-#include "Diagnostics_Emission.h" // Emission models defined here
+#include "Diagnostics.h"		 // We are defining Diagnostic member functions here
+#include "DiagnosticsEmission.h" // Emission models defined here
 
 #include "Geodesic.h"	 // We need member functions of the Geodesic class here
 #include "InputOutput.h" // for ScreenOutput()
