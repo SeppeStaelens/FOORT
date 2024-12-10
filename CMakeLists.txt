@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.15...3.31)
 
 project(
     FOORT
@@ -14,13 +14,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_FLAGS "-std=c++17 -fopenmp -O3 -Wno-unused-result")
-set(CMAKE_EXE_LINKER_FLAGS "-lm -lstdc++fs")
+# set(CMAKE_EXE_LINKER_FLAGS "-lm -lstdc++fs")
 
 include(Doxygen)
-#include(Testing)
+include(Testing)
 #include(ClangFormat)
 
 Doxygen("FOORT/src" docs)
 
 add_subdirectory(FOORT)
-#add_subdirectory(test)

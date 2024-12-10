@@ -16,22 +16,21 @@
 ////// compiling in pre-compiled mode.
 ///////////////////////////////////////////////////////////////////////////////////////
 
-#include "Geometry.h"     // basic tensor objects
-#include "Metric.h"       // Metrics
+//// CONFIGURATION_MODE is set in Config.h!
+#include "Config.h"       // Processing configuration file (with libconfig)
 #include "Diagnostics.h"  // Diagnostics
-#include "Terminations.h" // Termination conditions
 #include "Geodesic.h"     // Geodesics (and Sources)
-#include "ViewScreen.h"   // ViewScreen (this includes Mesh objects --- ViewScreen.h includes Mesh.h)
-#include "Integrators.h"  // Integrator functions
+#include "Geometry.h"     // basic tensor objects
 #include "InputOutput.h"  // Output to screen and files
+#include "Integrators.h"  // Integrator functions
+#include "Metric.h"       // Metrics
+#include "Terminations.h" // Termination conditions
 #include "Utilities.h"    // Various utility functions (including timer)
+#include "ViewScreen.h"   // ViewScreen (this includes Mesh objects --- ViewScreen.h includes Mesh.h)
 
 #include <omp.h> // Needed for parallel computations with OpenMP
 
 #include <iostream> // needed to open and load configuration file, if working in CONFIGURATION_MODE; also cout/cerr
-
-//// CONFIGURATION_MODE is set in Config.h!
-#include "Config.h" // Processing configuration file (with libconfig)
 
 ///////////////////////////////////////////////////////////////////////////////////////
 ////// PRECOMPILED SETTINGS SPECIFIED IN THIS FUNCTION                           //////

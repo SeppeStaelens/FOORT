@@ -4,13 +4,14 @@ The code files are all in the `FOORT/src` subfolder.
 
 ## QUICK INSTALL GUIDE
 
-### WINDOWS VISUAL STUDIO
-
-Use the `alternative_builds/Foort.sln` Visual Studio solution file and compile the FOORT project therein.
-
 ### LINUX / MAC:
 
-The executable can be built with `cmake`, which should be installed first. One can then run
+#### CMake
+
+The executable can be built with CMake, which should be installed first (for regular Makefiles, see further). The advantage of this method it that, in principle, CMake
+will automatically detect your relevant compilers.
+
+One can then run
 
 ```
 cmake -S . -B build
@@ -38,7 +39,11 @@ For convenience, this is stored in `alternative_builds/MacOS_workaround.sh`, whi
 
 #### Old MakeFiles
 
-Alternatively, old Makefiles can be found in `alternative_builds/old_makefiles`.
+Alternatively, old Makefiles can be found in `alternative_builds/old_makefiles`. These can be system dependant, however, but should be adaptable to your needs.
+
+### WINDOWS VISUAL STUDIO
+
+Use the `alternative_builds/Foort.sln` Visual Studio solution file and compile the FOORT project therein.
 
 ## OUTPUT
 
@@ -48,4 +53,6 @@ See in the [output](FOORT/Output) file for sample output files and Mathematica n
 
 See the [Documentation](./docs/Documentation.pdf) for more information on configuration options, how to add your own Metric, Diagnostic, or Termination, and how to process output.
 
-You can consult the `doxygen` created documentation <a href="https://github.com/SeppeStaelens/FOORT/tree/from_config_reader/docs/html/index.html" target="_blank">here</a> to find out more about the structure of the code. A PDF version of the latter is also availabel in `docs/latex`.
+You can consult the `doxygen` created documentation to find out more about the structure of the code.
+If you have downloaded the repository, you can achieve this by opening `docs/html/index.html` in a browser.
+A PDF version of this documentation is also available in `docs/latex`. The automated documentation is still under construction, however.
