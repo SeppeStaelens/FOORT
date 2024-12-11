@@ -1,19 +1,21 @@
 #include <gtest/gtest.h>
-#include <iostream>
-#include <fstream>
 
-#include "Config.h"
-#include "Geometry.h"
-#include "Metric.h"       // Metrics
-#include "Diagnostics.h"  // Diagnostics
-#include "Terminations.h" // Termination conditions
-#include "Geodesic.h"     // Geodesics (and Sources)
-#include "Integrators.h"  // Integrator functions
-#include "InputOutput.h"  // Output to screen and files
+#include "../src/Geometry.h" // basic tensor objects
+#include "Metric.h"          // Metrics
+#include "Diagnostics.h"     // Diagnostics
+#include "Terminations.h"    // Termination conditions
+#include "Geodesic.h"        // Geodesics (and Sources)
+#include "Integrators.h"     // Integrator functions
+#include "InputOutput.h"     // Output to screen and files
+
+#include <iostream>
 
 TEST(Metric, bound_geodesic)
 {
-    Point x = {1, 0, 0, 0};
+    //! This test computes the bound geodesic at r=3M in the Scwarzschild spacetime, and checks that it remains sufficiently
+    //! bound, i.e. does not deviate significantly over the course of the integration.
+    SetOutputLevel(OutputLevel::Level_0_WARNING);
+
     std::unique_ptr<Metric> theM = std::unique_ptr<Metric>(new KerrMetric(0., false, 1.));
     std::unique_ptr<Source> theS = std::unique_ptr<Source>(new NoSource(theM.get()));
 
@@ -31,7 +33,7 @@ TEST(Metric, bound_geodesic)
     BoundarySphereTermination::TermOptions =
         std::unique_ptr<BoundarySphereTermOptions>(new BoundarySphereTermOptions{10, false, 1});
     TimeOutTermination::TermOptions =
-        std::unique_ptr<TimeOutTermOptions>(new TimeOutTermOptions{1000, 1});
+        std::unique_ptr<TimeOutTermOptions>(new TimeOutTermOptions{10, 1});
 
     GeodesicIntegratorFunc theIntegrator = Integrators::IntegrateGeodesicStep_RK4; // IntegrateGeodesicStep_RK4 or IntegrateGeodesicStep_Verlet
     Integrators::IntegratorDescription = "RK4";
@@ -53,32 +55,14 @@ TEST(Metric, bound_geodesic)
     // Set the Geodesic to the current screen index and initial position/velocity
     theGeod.Reset(scrindex, initpos, initvel);
 
-    std::ofstream r_phi_file;
-    r_phi_file.open("r_phi_bound_geodesic.txt");
-    if (!r_phi_file.is_open())
-    {
-        std::cerr << "Error opening file r_phi_bound_geodesic.txt" << std::endl;
-        return;
-    }
-    else
-    {
-        std::cout << "success" << std::endl;
-    }
-    Point current_pos;
-    double current_r, current_phi;
     // Loop integrating the geodesic step by step until finished
     while (theGeod.getTermCondition() == Term::Continue)
     {
         theGeod.Update();
-        Point current_pos = theGeod.getCurrentPos();
-        current_r = current_pos[1];
-        current_phi = current_pos[3];
-        r_phi_file << std::setprecision(15) << current_r << " " << current_phi << std::endl;
-        //  << std::setprecision(15) << "Current radial position: " << current_r << " phi: " << current_phi << std::endl;
     }
 
-    r_phi_file.close();
-    current_pos = theGeod.getCurrentPos();
-    current_r = current_pos[1];
-    EXPECT_NEAR(current_r, 3.0, 0.1) << "Final radial position: " << current_r << std::endl;
+    Point current_pos = theGeod.getCurrentPos();
+    double current_r = current_pos[1];
+    EXPECT_NEAR(current_r, 3.0, 0.01);
+    std::cout << "Final radial position: " << current_r << std::endl;
 }
