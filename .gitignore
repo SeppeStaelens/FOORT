@@ -10,7 +10,7 @@ FOORT/FOORT
 PostProc/*
 FOORT/Output/BS*
 build/*
-bin/*
+FOORT/bin/*
 FOORT.zip
 docs/latex/*
 !docs/latex/refman.pdf

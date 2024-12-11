@@ -18,11 +18,10 @@ cmake -S . -B build
 cmake --build build
 ```
 
-which will cause the executable to be stored in the `bin` subdirectory. CMake can be cleaned by simply removing the relevant folders
+which will cause the executable to be stored in the `FOORT/bin` subdirectory. CMake can be cleaned by simply removing the relevant folders
 
 ```
 rm -rf build
-rm -rf bin
 ```
 
 #### MacOS Troubleshooting
