@@ -15,6 +15,7 @@ FOORT.zip
 docs/latex/*
 !docs/latex/refman.pdf
 FOORT/*.cfg
+.DS_Store
 
 # User-specific files
 *.rsuser
